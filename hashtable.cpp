@@ -6,11 +6,11 @@ const int base=31;
 vector<string>block[MOD+10];
 int get_hash(string s)
 {
-    int ans=0;
+    ll ans=0;
     for(char c:s)
     {
         int value=c-'0';
-        ans=(ans*base+value);
+        ans=(ans*base+value)%MOD;
     }
     return ans;
 }
@@ -38,4 +38,3 @@ int main()
         find_string(s);
     }
 }
-
